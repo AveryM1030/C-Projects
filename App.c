@@ -4,6 +4,7 @@
 #include "./headers/BasicIO.h"
 #include "./headers/Decisions.h"
 #include "./headers/Loops.h"
+#include "./headers/Functions.h"
 
 int main(void) {
     // puts("Hello World!!!");
@@ -23,4 +24,15 @@ int main(void) {
     // loops3();
     // loops4();
     // loops5();
+    // testing Functions functionality
+    // declare three character arrays
+    char student[] = "Avery";
+    char course[] = "Ruby";
+    char programmer[] = "Yukihiro Matsumoto";
+    congratulate1(student, course, programmer);
+    congratulate2(student, course, programmer);
+    printf("%.2f degrees celsius = %.2f fegrees fahrenheit\n", 
+        0.0, fahrenheitFromCelsius(0.0));
+    printf("%.2f degrees celsius = %.2f fegrees fahrenheit\n", 
+        100.0, fahrenheitFromCelsius(100.0));
 }
