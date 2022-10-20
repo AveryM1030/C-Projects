@@ -14,14 +14,14 @@
  */
 
 /* this function prints the address of itself */
-void printAddress(void){
+void printAddress(void) {
     // the %p format specifier used in the format string is
     // a placeholder for an address
     printf("The printAddress function is stored at %p\n", printAddress);
 }
 
 /* this function returns the address of the global variable i */
-int * getAddress(void){
+int * getAddress(void) {
 
     // declare a pointer to a integer
     // the star is needed when declaring a pointer
@@ -40,7 +40,7 @@ int * getAddress(void){
 
 /* this function returns the value stored at the address of the 
  * global variable i */
-int getDataAtAddress(void){
+int getDataAtAddress(void) {
     // declare a pointer to a integer
     // the star is needed when declaring a pointer
     int *ptr;
@@ -55,4 +55,95 @@ int getDataAtAddress(void){
     // the star is needed when accessing a value at an address in a pointer
     return (*ptr);
 }
-    
+
+/* this funcrtion changes the value at the address of the global 
+ * variable j */
+double storeDataAddress(void) {
+    // declare a pointer to a integer
+    // the star is needed when declaring a pointer
+    double *ptr;
+
+    // get the address of global variable j and store
+    // it in pointer
+    // must use the & when accessing an address of a variable
+    // the star is not needed when storing an address in a pointer
+    ptr = &j;
+
+    // change the value in the global variable j via the pointer
+    // the star is needed when accessing a value in a pointer
+    *ptr += *ptr;
+
+    // return the value store at the pointer
+    // the star is needed when accessing a value at an address in a pointer
+    return (*ptr);
+}
+
+/* this function returns the size of a double stored in a pointer */
+int getDoubleBytes(void) {
+    // declare a pointer to a integer
+    // the star is needed when declaring a pointer
+    double *ptr;
+
+    // get the address of global variable j and store
+    // it in pointer
+    // must use the & when accessing an address of a variable
+    // the star is not needed when storing an address in a pointer
+    ptr = &j;
+
+    // change the value in the global variable j via the pointer
+    // the star is needed when accessing a value in a pointer
+    *ptr += *ptr;
+
+    // return the sizes of the value store at the pointer
+    // the star is needed when accessing a value at an address in a pointer
+    return (sizeof(*ptr));
+}
+
+/* this function returns the size of the pointer to a double */
+int getPointerToDoubleBytes(void) {
+    // declare a pointer to a integer
+    // the star is needed when declaring a pointer
+    double *ptr;
+
+    // get the address of global variable j and store
+    // it in pointer
+    // must use the & when accessing an address of a variable
+    // the star is not needed when storing an address in a pointer
+    ptr = &j;
+
+    // change the value in the global variable j via the pointer
+    // the star is needed when accessing a value in a pointer
+    *ptr += *ptr;
+
+    // return the sizes of the pointer to a double
+    // the star is not needed when an address in a pointer
+    return (sizeof(ptr));
+}
+
+/* this function prints the address to a pointer to a double
+ * that stores null */
+void pointerToNull(void) {
+    // declare a pointer to a integer
+    // the star is needed when declaring a pointer
+    double *ptr;
+
+    // store a value of null at the address in the pointer
+    // to a double
+    // the star is not needed when storing an address in a pointer
+    // NULL is an address where no data exists
+    ptr = NULL;
+
+    // get the address of the glocal static variable j
+    // and store it in the pointer
+    // must use the & operator when accessing an address of a variable
+    // the star is not needed when storing an address in a pointer
+    ptr = &j;
+
+    // check if the pointer isn't NULL
+    // the star is not needed when accessing the address of a pointer
+    if (ptr) {
+        printf("The pointer is not null %p\n", ptr);
+    } else {
+        printf("The pointer is null %p\n", ptr);
+    }
+}   
