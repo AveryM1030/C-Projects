@@ -56,7 +56,12 @@ int main(void) {
 
     // call cartesianToPolar
     // must use the & to access an address of a variable
-    cartesianToPolar(x, y, &radiusPtr, &thetaPtr);
+    //cartesianToPolar(x, y, &radiusPtr, &thetaPtr);
     
-    printf("(%.2f, %.2f) equals (%.2f, %.2f)\n", x, y, radiusPtr, thetaPtr);
+    //printf("(%.2f, %.2f) equals (%.2f, %.2f)\n", x, y, radiusPtr, thetaPtr);
+
+    // testing AssignmentB
+    genFactorial();
+    genFactorialReference(x, y, n);
+    
 }

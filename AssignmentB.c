@@ -15,5 +15,20 @@ void genFactorial(void) {
 
 /* write function for question 2 */
 void genFactorialReference(double, double, double *, int *) {
+    float theta;
+    if (x == 0.0){
+        if (y == 0.0){
+            theta = 0.0;
+        } else if (y > 0.0){
+        theta = M_PI_2;
+    } else {
+        theta = M_PI_2;
+    }
+} else  {
+        theta = atan(y/x);
+    }
 
+    // store theta in the supplied address *thetaPtr
+    // the star is needed when storing a vale at the supplied address
+    *thetaPtr = theta;
 }
