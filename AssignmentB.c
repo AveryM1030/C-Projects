@@ -1,34 +1,33 @@
 // include pre-processor directive
 #include "./headers/AssignmentB.h"
 /* write function for question 1 */
-void genFactorial(void) {
-    // declare loop counter variable
-    int n;
+int genFactorial (int n) {
+// declare loop counter variable
+int i;
 
-    // set up for loop
-    // use marco expression as condition of for loop
-    for(n = START; condition(n); n++){
-        printf("%d ", n);
-    }
-    printf();
+printf("Factorial - Normal Variables\n");
+
+// loop as many times as specified
+// by the input number
+for (i = n - 1; genfactorialcondition(i); i--) {
+n = n * i;
+}
+
+return n;
 }
 
 /* write function for question 2 */
-void genFactorialReference(double, double, double *, int *) {
-    float theta;
-    if (x == 0.0){
-        if (y == 0.0){
-            theta = 0.0;
-        } else if (y > 0.0){
-        theta = M_PI_2;
-    } else {
-        theta = M_PI_2;
-    }
-} else  {
-        theta = atan(y/x);
-    }
+int genFactorialReference (int *n) {
+// declare loop counter variable
+int i;
 
-    // store theta in the supplied address *thetaPtr
-    // the star is needed when storing a vale at the supplied address
-    *thetaPtr = theta;
+printf("\nFactorial - Pointer Variables\n");
+
+// loop as many times as specified
+// by the input number
+for (i = *n - 1; genfactorialcondition(i); i--) {
+*n = *n * i;
+}
+
+return *n;
 }

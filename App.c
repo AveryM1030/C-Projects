@@ -7,6 +7,7 @@
 #include "./headers/Functions.h"
 #include "./headers/Pointers.h"
 #include "./headers/PassByReference.h"
+#include "./headers/AssignmentB.h"
 
 int main(void) {
     // puts("Hello World!!!");
@@ -61,7 +62,7 @@ int main(void) {
     //printf("(%.2f, %.2f) equals (%.2f, %.2f)\n", x, y, radiusPtr, thetaPtr);
 
     // testing AssignmentB
-    genFactorial();
-    genFactorialReference(x, y, n);
-    
+    int n = 4;
+    printf("Factorial of %d is %d\n", n, genFactorial(n));
+    printf("Factorial of %d is %d\n", 4, genFactorialReference(&n));
 }
