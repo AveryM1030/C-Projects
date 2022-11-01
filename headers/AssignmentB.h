@@ -8,3 +8,4 @@
 
 // declare functions
 int genFactorial (int);
+int genFactorialReference (int *);
