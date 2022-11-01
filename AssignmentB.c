@@ -1,5 +1,6 @@
 // include pre-processor directive
 #include "./headers/AssignmentB.h"
+
 /* write function for question 1 */
 int genFactorial (int n) {
 // declare loop counter variable

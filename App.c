@@ -48,12 +48,12 @@ int main(void) {
     // pointerToNull();
     // testing Pass By Reference functionality
     // declare double for (x,y) point
-    double x = 3.0;
-    double y = 4.0;
+    // double x = 3.0;
+    // double y = 4.0;
 
     // declare double for (radiusPtr, thetaPtr)
-    double radiusPtr;
-    double thetaPtr;
+    // double radiusPtr;
+    // double thetaPtr;
 
     // call cartesianToPolar
     // must use the & to access an address of a variable
